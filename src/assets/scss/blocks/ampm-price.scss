@@ -1,0 +1,32 @@
+.ampm-price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  font-family: $sansation;
+
+  @media (max-width: $tableWidth) {
+    margin-bottom: 14px;
+  }
+}
+
+.ampm-price__old {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: $default-black;
+  margin-top: 0;
+  margin-right: 28px;
+
+  @media (max-width: $tableWidth) {
+    margin-right: 13px;
+  }
+}
+
+.ampm-price__new {
+  font-size: 20px;
+  line-height: 13px;
+  font-weight: 400;
+  color: $cardinal;
+  margin-top: 0;
+}

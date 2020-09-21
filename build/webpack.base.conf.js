@@ -19,8 +19,7 @@ const PATHS = {
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
 const PAGES_DIR = PATHS.src
 const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter(fileName => fileName.endsWith('.html'))
+  .readdirSync(`${PAGES_DIR}/pug/pages`).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
   externals: {
@@ -37,7 +36,7 @@ module.exports = {
       publicPath: '/' - relative path for dist folder (js,css etc)
       publicPath: './' (dot before /) - absolute path for dist folder (js,css etc)
     */
-    publicPath: '/'
+    publicPath: ''
   },
   optimization: {
     splitChunks: {
@@ -53,6 +52,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        // pug
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
       {
         // JavaScript
         test: /\.js$/,
@@ -140,7 +144,7 @@ module.exports = {
     // Vue loader
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`
+      filename: `assets/css/[name].[contenthash].css`
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -172,8 +176,8 @@ module.exports = {
     ...PAGES.map(
       page =>
         new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page}`
+          template: `${PAGES_DIR}/pug/pages/${page}`,
+          filename: `./${page.replace(/\.pug/, '.html')}`
         })
     )
   ]

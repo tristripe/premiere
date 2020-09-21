@@ -1,0 +1,12 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Главный шаблон'
+  - var description = 'Описание страницы'
+  - var pageClass = 'index-main'
+
+block content
+  h1 Список страниц
+  ul
+    li
+      a(href="evil-discount.html") Очень злые скидки

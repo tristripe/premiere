@@ -1,0 +1,298 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Очень злые скидки'
+  - var description = 'Описание страницы'
+  - var pageClass = 'ampm-page'
+
+block content
+  section.ampm-banner
+    .ampm-banner__wrapper
+      +picture('main--mobile@1x.jpg', 'main@1x.jpg', 'Очень злые скидки', '1600', '625')
+  section.ampm-opening.container
+    .ampm-opening__wrapper.swiper-container
+      h1.ampm-opening__title Не пугайтесь! Эти цены не кусаются
+      ul.ampm-opening__list.ampm-catalog.swiper-wrapper
+        li.swiper-slide
+          +item('', '-40%', 'F8093016.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-like-f8093016/', 'Смеситель для раковины', 'Like', '7 990', '4 790' )
+        li.swiper-slide
+          +item('', '-20%', 'F0180064.jpg', 'https://ampm-store.ru/catalog/dushevoy-komplekt-like-f0180064/', 'Душевой комплект', 'Like', '6 590', '5 290' )
+        li.swiper-slide
+          +item('', '-30%', '20944.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-podvesnoy-tumboy-65-sm-belyy-glyanets-like-20944/', 'База под раковину подвесная 65 см, 2 ящика, белый глянец', 'Like', '11 190', '7 790' )
+        li.swiper-slide
+          +item('','-20%', '400x400.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-sidenem-mikrolift-awe-c111738sc/', 'Унитаз подвесной с сиденьем микролифт', 'Awe', '21 250', '16 990' )
+  section.container.ampm-advantages
+    section.ampm-advantages__inner.swiper-container
+      ul.ampm-advantages__list.swiper-wrapper
+        li.ampm-advantages__item.ampm-text-slide.swiper-slide
+          .ampm-text-slide__image-wrapper
+            picture
+              source(media='(max-width: 769px)' srcset='./assets/img/evil-discount/slide-text--mobile-1@1x.png')
+              img(src='./assets/img/evil-discount/slide-text-1@1x.png' alt='Скидки до 40%' width='399' height='451')
+          .ampm-text-slide__content
+            .ampm-text-slide__text
+              p Без паники! С такими скидками ремонт не кусается. Успейте приобрести продукцию коллекционного немецкого бренда с выгодой до 40%!
+              p Сантехника и мебель для ванных комнат от АМ.РМ - тот самый преданный друг, который будет служить вам верой и правдой благодаря европейскому качеству и гениальной инженерии.
+              p До 31 ноября по всей территории страны дизайнерские функциональные коллекции Like и X-Joy станут еще доступнее - торопитесь!
+            +buttons-text-slide('Скидки', 'Дизайн', 'Инновации')
+
+        li.ampm-advantages__item.ampm-text-slide.swiper-slide
+          .ampm-text-slide__image-wrapper
+            +picture('slide-text--mobile-2@1x.jpg', 'slide-text-2@1x.png', 'Лучшие дизайнеры', '664', '485')
+          .ampm-text-slide__content
+            .ampm-text-slide__text
+              p Что связывает именитые дизайн-бюро GP Designpartners из Австрии и DanelonMeroni из Италии & Великобритании? Совместная с АМ.РМ работа над коллекциями Like и X-Joy!
+              p Идеальны от угла наклона аэратора до кончиков ручек тумбы под раковину. Like не оставит равнодушными ценителей природных мотивов в современном дизайне, а X-Joy порадует своей главной фишкой - устремленными ввысь деталями.
+              p Не упустите возможность сделать вашу комнату самым трендовым местом в доме со скидками до 40%!
+            +buttons-text-slide('Скидки', 'Дизайн', 'Инновации')
+
+        li.ampm-advantages__item.ampm-text-slide.swiper-slide
+          .ampm-text-slide__image-wrapper
+            picture
+              source(media='(max-width: 769px)' srcset='./assets/img/evil-discount/slide-text--mobile-3@1x.jpg')
+              img(src='./assets/img/evil-discount/slide-text-3@1x.png' alt='Внедрение инноваций в разработки премиум-класса' width='664' height='485')
+          .ampm-text-slide__content
+            .ampm-text-slide__text
+              p АМ.РМ первыми начали внедрять высокотехнологичные разработки премиум-класса в продукты доступного ценового сегмента. Доказательство тому - коллекции Like и X-Joy!
+              p Картриджи смесителей последнего поколения, функция моментальной очистки душевых форсунок, инновационный способ покрытия мебели полиакриловыми эко-эмалями - это далеко не полный список тех ноу-хау, которыми вы можете овладеть по самой привлекательной цене.
+              p Убедитесь в этом сами до конца нашей беспрецедентной акции!
+            +buttons-text-slide('Скидки', 'Дизайн', 'Инновации')
+
+  section.ampm-tabs.container.container--expand
+    .ampm-tabs__wrapper
+      input(type='radio' name='tabs-control' checked)#toilet.ampm-tabs__radio.ampm-tabs__radio--toilet
+      label(for='toilet').ampm-tabs__label Фаянс
+      input(type='radio' name='tabs-control')#furniture.ampm-tabs__radio.ampm-tabs__radio--furniture
+      label(for='furniture').ampm-tabs__label Мебель для<br> ванной комнаты
+      input(type='radio' name='tabs-control')#mixer.ampm-tabs__radio.ampm-tabs__radio--mixer
+      label(for='mixer').ampm-tabs__label Смесители
+      input(type='radio' name='tabs-control')#shower.ampm-tabs__radio.ampm-tabs__radio--shower
+      label(for='shower').ampm-tabs__label Душевое<br> оборудование
+      input(type='radio' name='tabs-control')#bath.ampm-tabs__radio.ampm-tabs__radio--bath
+      label(for='bath').ampm-tabs__label Ванны
+      input(type='radio' name='tabs-control')#cabin.ampm-tabs__radio.ampm-tabs__radio--cabin
+      label(for='cabin').ampm-tabs__label Душевые<br> кабины
+      input(type='radio' name='tabs-control')#accessories.ampm-tabs__radio.ampm-tabs__radio--accessories
+      label(for='accessories').ampm-tabs__label Аксессуары
+
+
+      <!-- Таб c фаянсом -->
+      .ampm-tabs__container.ampm-tabs__container--toilet.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-toilet--mobile@1x.jpg', 'tab-toilet@1x.jpg', 'Фаянс', '641', '481')
+            +item-tab('', '-20%', 'C801700SC.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-zakrytym-sidenem-like-c801700sc/', 'Унитаз подвесной, с закрытым сиденьем', 'Like', '16 590', '13 290' )
+            +item-tab('', '-20%', 'C804221WH.jpg', 'https://ampm-store.ru/catalog/rakovina-55-sm-like-c804221wh/', 'Раковина, 55 см', 'Like', '7 790', '6 190' )
+            +item-tab('', '-20%', '400x400.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-sidenem-mikrolift-awe-c111738sc/', 'Унитаз подвесной с сиденьем микролифт', 'Awe', '21 250', '16 990' )
+            +item-tab('', '-20%', 'C708607SC.jpg', 'https://ampm-store.ru/catalog/unitaz-kompakt-napolnyy-s-zakrytym-sidenem-spirit-2-0-c708607sc/', 'Унитаз-компакт, напольный, с закрытым сиденьем', 'Spirit v2.0', '22 890', '17 990' )
+            +item-tab('', '-15%', 'C538607SC.jpg', 'https://ampm-store.ru/catalog/napolnyy-unitaz-kompakt-s-sidenem-bliss-l-c538607sc/', 'Напольный унитаз-компакт, с сиденьем', 'Bliss L', '23 990', '20 390' )
+            +item-tab('', '-15%', 'C111739SC.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-elektronnoy-kryshkoy-bide-clean-care-awe-c111739sc/', 'Унитаз подвесной, с электронной крышкой-биде Clean Care', 'Awe', '64 990', '55 190' )
+            +item-tab('', '-15%', 'IS374A1738.jpg', 'https://ampm-store.ru/catalog/is374a1738_komplekt_installyatsiya_s_klav_glyants_khrom_s_podvesnym_unitazom_sense_s_sidenem_mikroli/', 'Инсталляция с подвесным унитазом, с сиденьем микролифт и клавишей', 'Sense', '22 990', '19 490' )
+            +item-tab('', '-15%', 'IS30174A1738.jpg', 'https://ampm-store.ru/catalog/komplekt-installyatsiya-s-podvesnym-unitazom-s-sidenem-mikrolift-i-klavishey-sense-is301-74a1738/', 'Инсталляция с подвесным унитазом, с сиденьем микролифт и клавишей', 'Sense', '21 490', '18 290' )
+            +item-tab('', '-15%', 'IS301801700.jpg', 'https://ampm-store.ru/catalog/komplekt-installyatsiya-s-podvesnym-unitazom-bezobodkovym-flashclean-s-sidenem-i-klavishey-like-is301-801700/', 'Инсталляция с подвесным унитазом безободковым FlashClean, с сиденьем и клавишей', 'Like', '27 790', '23 590' )
+            +item-tab('', '-15%', 'IS3801700.jpg', 'https://ampm-store.ru/catalog/komplekt-installyatsiya-s-podvesnym-unitazom-bezobodkovym-flashclean-s-sidenem-i-klavishey-like-is3801700/', 'Инсталляция с подвесным унитазом безободковым FlashClean, с сиденьем и клавишей', 'Like', '28 790', '24 490' )
+
+
+      <!-- Таб с мебелью -->
+      .ampm-tabs__container.ampm-tabs__container--furniture.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-furniture--mobile@1x.jpg', 'tab-furniture@1x.jpg', 'Мебель для ванной комнаты', '641', '481')
+            +item-tab('', '-30%', '20944.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-podvesnoy-tumboy-65-sm-belyy-glyanets-like-20944/', 'База под раковину подвесная 65 см, 2 ящика, белый глянец', 'Like', '11 190', '7 790' )
+            +item-tab('', '-30%', '20945.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-podvesnoy-tumboy-80-sm-belyy-glyanets-like-20945/', 'База под раковину подвесная 80 см, 2 ящика, белый глянец', 'Like', '12 190', '8 490' )
+            +item-tab('', '-30%', '20942.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-napolnoy-tumboy-65-sm-belyy-glyanets-like-20942/', 'База под раковину напольная 65 см, 2 ящика, белый глянец', 'Like', '11 890', '8 290' )
+            +item-tab('', '-30%', '20943.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-napolnoy-tumboy-80-sm-belyy-glyanets-like-20943/', 'База под раковину напольная 80 см, 2 ящика, белый глянец', 'Like', '12 990', '9 090' )
+            +item-tab('', '-30%', 'M91AMOX0551WG.jpg', 'https://ampm-store.ru/catalog/zerkalo-s-led-podsvetkoy-po-perimetru-55-sm-gem-m91amox0551wg/', 'Зеркало с LED-подсветкой по периметру, 55 см', 'Gem', '6 990', '4 890' )
+            +item-tab('', '-30%', 'M91AMOX0801WG.jpg', 'https://ampm-store.ru/catalog/zerkalo-s-led-podsvetkoy-po-perimetru-80-sm-gem-m91amox0801wg/', 'Зеркало с LED-подсветкой по периметру, 80 см', 'Gem', '8 490', '5 890' )
+            +item-tab('', '-30%', 'M91AMOX0651WG.jpg', 'https://ampm-store.ru/catalog/zerkalo-s-led-podsvetkoy-po-perimetru-65-sm-gem-m91amox0651wg/', 'Зеркало с LED-подсветкой по периметру, 65 см', 'Gem', '7 490', '5 190' )
+
+
+      <!-- Таб со смесителями -->
+      .ampm-tabs__container.ampm-tabs__container--mixer.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-mixer--mobile@1x.jpg', 'tab-mixer@1x.jpg', 'Смеситель', '641', '481')
+            +item-tab('', '-30%', 'F8010016.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-like-f8010016/', 'Смеситель для ванны и душа', 'Like', '10 990', '7 690' )
+            +item-tab('', '-20%', 'F8013000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-kukhni-s-gibkim-izlivom-like-f8013000/', 'Смеситель для кухни с гибким изливом', 'Like', '9 390', '7 490' )
+            +item-tab('', '-40%', 'F8093016.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-like-f8093016/', 'Смеситель для раковины', 'Like', '7 990', '4 790' )
+            +item-tab('', '-15%', 'F85A02100.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-x-joy-f85a02100/', 'Смеситель для раковины', 'X-Joy', '4 590', '3 890' )
+            +item-tab('', '-15%', 'F8092000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-vysokiy-like-f8092000/', 'Смеситель для раковины, высокий', 'Like', '11 990', '10 190' )
+            +item-tab('', '-15%', 'F85A10000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-x-joy-f85a10000/', 'Смеситель для ванны и душа', 'X-Joy', '6 590', '5 590' )
+            +item-tab('', '-15%', 'F85A90000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-s-dlinnym-izlivom-x-joy-f85a90000/', 'Смеситель для ванны и душа с длинным изливом', 'X-Joy', '7 790', '6 590' )
+            +item-tab('', '-15%', 'F85A95000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-izliv-300-mm-dushevoy-nabor-khrom-x-joy-f85a95000/', 'Смеситель для ванны и душа излив 300 мм, душевой набор', 'X-Joy', '9 790', '8 290' )
+            +item-tab('', '-15%', 'F85E10000.jpeg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-dusha--f85e10000/', 'Смеситель для ванны и душа', 'Joy', '5 890', '4 990' )
+            +item-tab('', '-20%', 'F8007100.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-kukhni-khrom-like-f8007100/', 'Смеситель для кухни', 'Like', '4 890', '3 990' )
+            +item-tab('', '-15%', 'F8083116.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-bide-s-donnym-klapanom-like-f8083116/', 'Смеситель для биде с донным клапаном', 'Like', '8 990', '7 590' )
+            +item-tab('', '-15%', 'F85A20000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-dusha-x-joy-f85a20000/', 'Смеситель для душа', 'X-Joy', '5 590', '4 790' )
+
+
+      <!-- Таб с душевым оборудованием -->
+      .ampm-tabs__container.ampm-tabs__container--shower.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-shower--mobile@1x.jpg', 'tab-shower@1x.jpg', 'Душевое оборудование', '641', '481')
+            +item-tab('', '-20%', 'F0180064.jpg', 'https://ampm-store.ru/catalog/dushevoy-komplekt-like-f0180064/', 'Душевой комплект', 'Like', '6 590', '5 290' )
+            +item-tab('', '-20%', 'F0780064.jpg', 'https://ampm-store.ru/catalog/dushevaya-sistema-like-f0780064/', 'Душевая система', 'Like', '17 690', '14 190' )
+            +item-tab('', '-20%', 'F0780464.jpg', 'https://ampm-store.ru/catalog/dushevaya-sistema-showerspot-s-termostatom-like-f0780464/', 'Душевая система ShowerSpot с термостатом', 'Like', '32 990', '26 390' )
+            +item-tab('', '-20%', 'F0780564.jpg', 'https://ampm-store.ru/catalog/dushevaya-sistema-showerspot-s-termostatom-like-f0780564/', 'Душевая система ShowerSpot с термостатом', 'Like', '36 990', '29 590' )
+            +item-tab('', '-20%', 'F0780920.jpeg', 'https://ampm-store.ru/catalog/f0780920_am_pm_dush_sistema_nabor_sm_l_d_vanny_dusha_verkhniy_dush_d220_mm_ruchnoy_dush_110_mm_3_fun/', 'Душевая система', 'Like', '24 590', '19 690' )
+            +item-tab('', '-15%', 'W85P-2-136AW.jpg', 'https://ampm-store.ru/catalog/gidromassazhnaya-panel-joy-w85p-2-136aw/', 'Гидромассажная панель', 'Joy', '24 490', '20 790' )
+
+
+      <!-- Таб с ванными -->
+      .ampm-tabs__container.ampm-tabs__container--bath.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-bath--mobile@1x.jpg', 'tab-bath@1x.jpg', 'Ванны', '641', '481')
+            +item-tab('', '-40%', '20546.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-170kh70-sm-s-karkasom-like-20546/', 'Ванна акриловая 170х70 см с каркасом', 'Like', '19 990', '11 990' )
+            +item-tab('', '-20%', '20535.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-170kh70-sm-s-karkasom-x-joy-20535/', 'Ванна акриловая 170х70 см с каркасом', 'X-Joy', '13 790', '10 990' )
+            +item-tab('', '-40%', '20545.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-150kh70-sm-s-karkasom-like-20545/', 'Ванна акриловая 150х70 см с каркасом', 'Like', '18 990', '11 390' )
+            +item-tab('', '-20%', '20534.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-150kh70-sm-s-karkasom-x-joy-20534/', 'Ванна акриловая 150х70 см с каркасом', 'X-Joy', '12 690', '10 190' )
+
+
+      <!-- Таб с душевыми кабинами -->
+      .ampm-tabs__container.ampm-tabs__container--cabin.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-cabin--mobile@1x.jpg', 'tab-cabin@1x.jpg', 'Душевые кабины', '641', '481')
+            +item-tab('', '-15%', 'W80C-016-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-bez-gidromassazha-like-w80c-016-090mta/', 'Душевая кабина 90х90 см, без гидромассажа', 'Like', '69 990', '59 490' )
+            +item-tab('', '-15%', 'W80C-019-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-s-gidromassazhem-like-w80c-019-090mta/', 'Душевая кабина 90х90 см, с гидромассажем', 'Like', '85 990', '73 090' )
+            +item-tab('', '-15%', 'W80C-020A-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-s-gidromassazhem-s-parom-glubokiy-poddon-like-w80c-020a-090mta/', 'Душевая кабина 90х90 см, с гидромассажем, с паром, глубокий поддон', 'Like', '129 990', '110 490' )
+            +item-tab('', '-15%', 'W80C-019A-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-s-gidromassazhem-glubokiy-poddon-like-w80c-019a-090mta/', 'Душевая кабина 90х90 см, с гидромассажем, глубокий поддон', 'Like', '87 990', '74 790' )
+
+
+      <!-- Таб с Аксессуарами -->
+      .ampm-tabs__container.ampm-tabs__container--accessories.ampm-product-tab
+        .swiper-wrapper
+          .ampm-product-tab__wrapper
+            .ampm-product-tab__image-wrapper
+              +picture('tab-access--mobile@1x.jpg', 'tab-access@1x.jpg', 'Аксессуары', '641', '481')
+            +item-tab('', '-40%', 'A8035600.jpg', 'https://ampm-store.ru/catalog/dvoynoy-kryuchok-dlya-polotenets-like-a8035600/', 'Двойной крючок для полотенец', 'Like', '850', '490' )
+            +item-tab('', '-40%', 'A8033400.jpg', 'https://ampm-store.ru/catalog/stoyka-s-tualetnoy-shchetkoy-universalnaya-like-a8033400/', 'Стойка с туалетной щеткой, универсальная', 'Like', '3 250', '1 990' )
+            +item-tab('', '-40%', 'A8035500.jpg', 'https://ampm-store.ru/catalog/kryuchok-dlya-polotenets-like-a8035500/', 'Крючок для полотенец', 'Like', '750', '490' )
+            +item-tab('', '-40%', 'A8034300.jpg', 'https://ampm-store.ru/catalog/steklyannyy-stakan-s-nastennym-derzhatelem-like-a8034300/', 'Стеклянный стакан с настенным держателем', 'Like', '1 690', '990' )
+            +item-tab('', '-40%', 'A8034100.jpg', 'https://ampm-store.ru/catalog/derzhatel-dlya-tualetnoy-bumagi-bez-kryshki-like-a8034100/', 'Держатель для туалетной бумаги, без крышки', 'Like', '1 690', '990' )
+            +item-tab('', '-40%', 'A8034400.jpg', 'https://ampm-store.ru/catalog/koltso-dlya-polotenets-like-a8034400/', 'Кольцо для полотенец', 'Like', '1 890', '1 090' )
+            +item-tab('', '-40%', 'A80341500.jpg', 'https://ampm-store.ru/catalog/derzhatel-dlya-tualetnoy-bumagi-s-kryshkoy-like-a80341500/', 'Держатель для туалетной бумаги, с крышкой', 'Like', '1 790', '1 090' )
+            +item-tab('', '-40%', 'A8036900.jpg', 'https://ampm-store.ru/catalog/steklyannyy-dispenser-dlya-zhidkogo-myla-s-nastennym-derzhatelem-like-a8036900/', 'Стеклянный диспенсер для жидкого мыла, с настенным держателем', 'Like', '2 120', '1 290' )
+            +item-tab('', '-40%', 'A80346400.jpg', 'https://ampm-store.ru/catalog/veshalka-dlya-polotenets-60-sm-like-a80346400/', 'Вешалка для полотенец, 60 см', 'Like', '2 690', '1 590' )
+            +item-tab('', '-40%', 'A8032600.jpg', 'https://ampm-store.ru/catalog/dvoynaya-veshalka-vertushka-dlya-polotenets-40-sm-like-a8032600/', 'Двойная вешалка-вертушка для полотенец, 40 см', 'Like', '3 250', '1 990' )
+            +item-tab('', '-40%', 'A8037700.jpg', 'https://ampm-store.ru/catalog/polka-dlya-polotenets-like-a8037700/', 'Полка для полотенец', 'Like', '7 390', '4 390' )
+
+
+
+  section.ampm-tabs.ampm-tabs--mobile
+    .ampm-tabs__wrapper.container
+      .ampm-tabs__button-wrapper.swiper-container
+        .ampm-tabs__controls.swiper-wrapper
+          button(type='button').ampm-tabs__button.swiper-slide Фаянс
+          button(type='button').ampm-tabs__button.swiper-slide Мебель для <br> ванной комнаты
+          button(type='button').ampm-tabs__button.swiper-slide Смесители
+          button(type='button').ampm-tabs__button.swiper-slide Душевое оборудование
+          button(type='button').ampm-tabs__button.swiper-slide Ванны
+          button(type='button').ampm-tabs__button.swiper-slide Душевые<br> кабины
+          button(type='button').ampm-tabs__button.swiper-slide Аксессуары
+
+      .ampm-tabs__content-wrapper
+
+        <!-- Фаянс -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-tabs__container--active.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-toilet--mobile@1x.jpg', 'tab-toilet@1x.jpg', 'Фаянс', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'C801700SC.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-zakrytym-sidenem-like-c801700sc/', 'Унитаз подвесной, с закрытым сиденьем', 'Like', '16 590', '13 290' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'C804221WH.jpg', 'https://ampm-store.ru/catalog/rakovina-55-sm-like-c804221wh/', 'Раковина, 55 см', 'Like', '7 790', '6 190' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', '400x400.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-sidenem-mikrolift-awe-c111738sc/', 'Унитаз подвесной с сиденьем микролифт', 'Awe', '21 250', '16 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'C708607SC.jpg', 'https://ampm-store.ru/catalog/unitaz-kompakt-napolnyy-s-zakrytym-sidenem-spirit-2-0-c708607sc/', 'Унитаз-компакт, напольный, с закрытым сиденьем', 'Spirit v2.0', '22 890', '17 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'C538607SC.jpg', 'https://ampm-store.ru/catalog/napolnyy-unitaz-kompakt-s-sidenem-bliss-l-c538607sc/', 'Напольный унитаз-компакт, с сиденьем', 'Bliss L', '23 990', '20 390' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'C111739SC.jpg', 'https://ampm-store.ru/catalog/unitaz-podvesnoy-s-elektronnoy-kryshkoy-bide-clean-care-awe-c111739sc/', 'Унитаз подвесной, с электронной крышкой-биде Clean Care', 'Awe', '64 990', '55 190' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'IS374A1738.jpg', 'https://ampm-store.ru/catalog/is374a1738_komplekt_installyatsiya_s_klav_glyants_khrom_s_podvesnym_unitazom_sense_s_sidenem_mikroli/', 'Инсталляция с подвесным унитазом, с сиденьем микролифт и клавишей', 'Sense', '22 990', '19 490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'IS30174A1738.jpg', 'https://ampm-store.ru/catalog/komplekt-installyatsiya-s-podvesnym-unitazom-s-sidenem-mikrolift-i-klavishey-sense-is301-74a1738/', 'Инсталляция с подвесным унитазом, с сиденьем микролифт и клавишей', 'Sense', '21 490', '18 290' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'IS301801700.jpg', 'https://ampm-store.ru/catalog/komplekt-installyatsiya-s-podvesnym-unitazom-bezobodkovym-flashclean-s-sidenem-i-klavishey-like-is301-801700/', 'Инсталляция с подвесным унитазом безободковым FlashClean, с сиденьем и клавишей', 'Like', '27 790', '23 590' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'IS3801700.jpg', 'https://ampm-store.ru/catalog/komplekt-installyatsiya-s-podvesnym-unitazom-bezobodkovym-flashclean-s-sidenem-i-klavishey-like-is3801700/', 'Инсталляция с подвесным унитазом безободковым FlashClean, с сиденьем и клавишей', 'Like', '28 790', '24 490' )
+
+        <!-- Мебель для ванной комнаты -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-furniture--mobile@1x.jpg', 'tab-furniture@1x.jpg', 'Мебель для ванной комнаты', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', '20944.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-podvesnoy-tumboy-65-sm-belyy-glyanets-like-20944/', 'База под раковину подвесная 65 см, 2 ящика, белый глянец', 'Like', '11 190', '7 790' )
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', '20945.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-podvesnoy-tumboy-80-sm-belyy-glyanets-like-20945/', 'База под раковину подвесная 80 см, 2 ящика, белый глянец', 'Like', '12 190', '8 490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', '20942.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-napolnoy-tumboy-65-sm-belyy-glyanets-like-20942/', 'База под раковину напольная 65 см, 2 ящика, белый глянец', 'Like', '11 890', '8 290' )
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', '20943.jpg', 'https://ampm-store.ru/catalog/mebel-dlya-vannoy-s-napolnoy-tumboy-80-sm-belyy-glyanets-like-20943/', 'База под раковину напольная 80 см, 2 ящика, белый глянец', 'Like', '12 990', '9 090' )
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', 'M91AMOX0551WG.jpg', 'https://ampm-store.ru/catalog/zerkalo-s-led-podsvetkoy-po-perimetru-55-sm-gem-m91amox0551wg/', 'Зеркало с LED-подсветкой по периметру, 55 см', 'Gem', '6 990', '4 890' )
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', 'M91AMOX0801WG.jpg', 'https://ampm-store.ru/catalog/zerkalo-s-led-podsvetkoy-po-perimetru-80-sm-gem-m91amox0801wg/', 'Зеркало с LED-подсветкой по периметру, 80 см', 'Gem', '8 490', '5 890' )
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', 'M91AMOX0651WG.jpg', 'https://ampm-store.ru/catalog/zerkalo-s-led-podsvetkoy-po-perimetru-65-sm-gem-m91amox0651wg/', 'Зеркало с LED-подсветкой по периметру, 65 см', 'Gem', '7 490', '5 190' )
+
+        <!-- Cмесители -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-mixer--mobile@1x.jpg', 'tab-mixer@1x.jpg', 'Смеситель', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-30%', 'F8010016.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-like-f8010016/', 'Смеситель для ванны и душа', 'Like', '10 990', '7 690' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F8013000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-kukhni-s-gibkim-izlivom-like-f8013000/', 'Смеситель для кухни с гибким изливом', 'Like', '9 390', '7 490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'F8093016.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-like-f8093016/', 'Смеситель для раковины', 'Like', '7 990', '4 790' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F85A02100.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-x-joy-f85a02100/', 'Смеситель для раковины', 'X-Joy', '4 590', '3 890' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F8092000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-rakoviny-vysokiy-like-f8092000/', 'Смеситель для раковины, высокий', 'Like', '11 990', '10 190' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F85A10000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-x-joy-f85a10000/', 'Смеситель для ванны и душа', 'X-Joy', '6 590', '5 590' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F85A90000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-s-dlinnym-izlivom-x-joy-f85a90000/', 'Смеситель для ванны и душа с длинным изливом', 'X-Joy', '7 790', '6 590' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F85A95000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-i-dusha-izliv-300-mm-dushevoy-nabor-khrom-x-joy-f85a95000/', 'Смеситель для ванны и душа излив 300 мм, душевой набор', 'X-Joy', '9 790', '8 290' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F85E10000.jpeg', 'https://ampm-store.ru/catalog/smesitel-dlya-vanny-dusha--f85e10000/', 'Смеситель для ванны и душа', 'Joy', '5 890', '4 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F8007100.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-kukhni-khrom-like-f8007100/', 'Смеситель для кухни', 'Like', '4 890', '3 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F8083116.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-bide-s-donnym-klapanom-like-f8083116/', 'Смеситель для биде с донным клапаном', 'Like', '8 990', '7 590' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'F85A20000.jpg', 'https://ampm-store.ru/catalog/smesitel-dlya-dusha-x-joy-f85a20000/', 'Смеситель для душа', 'X-Joy', '5 590', '4 790' )
+
+        <!-- Душевое оборудование -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-shower--mobile@1x.jpg', 'tab-shower@1x.jpg', 'Душевое оборудование', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F0180064.jpg', 'https://ampm-store.ru/catalog/dushevoy-komplekt-like-f0180064/', 'Душевой комплект', 'Like', '6 590', '5 290' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F0780064.jpg', 'https://ampm-store.ru/catalog/dushevaya-sistema-like-f0780064/', 'Душевая система', 'Like', '17 690', '14 190' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F0780464.jpg', 'https://ampm-store.ru/catalog/dushevaya-sistema-showerspot-s-termostatom-like-f0780464/', 'Душевая система ShowerSpot с термостатом', 'Like', '32 990', '26 390' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F0780564.jpg', 'https://ampm-store.ru/catalog/dushevaya-sistema-showerspot-s-termostatom-like-f0780564/', 'Душевая система ShowerSpot с термостатом', 'Like', '36 990', '29 590' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', 'F0780920.jpeg', 'https://ampm-store.ru/catalog/f0780920_am_pm_dush_sistema_nabor_sm_l_d_vanny_dusha_verkhniy_dush_d220_mm_ruchnoy_dush_110_mm_3_fun/', 'Душевая система', 'Like', '24 590', '19 690' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'W85P-2-136AW.jpg', 'https://ampm-store.ru/catalog/gidromassazhnaya-panel-joy-w85p-2-136aw/', 'Гидромассажная панель', 'Joy', '24 490', '20 790' )
+
+        <!-- Ванны -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-bath--mobile@1x.jpg', 'tab-bath@1x.jpg', 'Ванны', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', '20546.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-170kh70-sm-s-karkasom-like-20546/', 'Ванна акриловая 170х70 см с каркасом', 'Like', '19 990', '11 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', '20535.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-170kh70-sm-s-karkasom-x-joy-20535/', 'Ванна акриловая 170х70 см с каркасом', 'X-Joy', '13 790', '10 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', '20545.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-150kh70-sm-s-karkasom-like-20545/', 'Ванна акриловая 150х70 см с каркасом', 'Like', '18 990', '11 390' )
+            +item-tab('swiper-slide ampm-item--mobile', '-20%', '20534.jpg', 'https://ampm-store.ru/catalog/vanna-akrilovaya-150kh70-sm-s-karkasom-x-joy-20534/', 'Ванна акриловая 150х70 см с каркасом', 'X-Joy', '12 690', '10 190' )
+
+        <!-- Душевые кабины -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-cabin--mobile@1x.jpg', 'tab-cabin@1x.jpg', 'Душевые кабины', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'W80C-016-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-bez-gidromassazha-like-w80c-016-090mta/', 'Душевая кабина 90х90 см, без гидромассажа', 'Like', '69 990', '59 490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'W80C-019-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-s-gidromassazhem-like-w80c-019-090mta/', 'Душевая кабина 90х90 см, с гидромассажем', 'Like', '85 990', '73 090' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'W80C-020A-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-s-gidromassazhem-s-parom-glubokiy-poddon-like-w80c-020a-090mta/', 'Душевая кабина 90х90 см, с гидромассажем, с паром, глубокий поддон', 'Like', '129 990', '110 490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-15%', 'W80C-019A-090MTA.jpg', 'https://ampm-store.ru/catalog/dushevaya-kabina-90kh90-sm-s-gidromassazhem-glubokiy-poddon-like-w80c-019a-090mta/', 'Душевая кабина 90х90 см, с гидромассажем, глубокий поддон', 'Like', '87 990', '74 790' )
+
+        <!-- Аксессуары -->
+        .ampm-tabs__container.ampm-tabs__container--mobile.ampm-product-tab.swiper-container
+          .ampm-product-tab__image-wrapper
+            +picture('tab-access--mobile@1x.jpg', 'tab-access@1x.jpg', 'Аксессуары', '641', '481')
+          .swiper-wrapper.ampm-product-tab__wrapper.ampm-product-tab__wrapper--mobile
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8035600.jpg', 'https://ampm-store.ru/catalog/dvoynoy-kryuchok-dlya-polotenets-like-a8035600/', 'Двойной крючок для полотенец', 'Like', '850', '490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8033400.jpg', 'https://ampm-store.ru/catalog/stoyka-s-tualetnoy-shchetkoy-universalnaya-like-a8033400/', 'Стойка с туалетной щеткой, универсальная', 'Like', '3 250', '1 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8035500.jpg', 'https://ampm-store.ru/catalog/kryuchok-dlya-polotenets-like-a8035500/', 'Крючок для полотенец', 'Like', '750', '490' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8034300.jpg', 'https://ampm-store.ru/catalog/steklyannyy-stakan-s-nastennym-derzhatelem-like-a8034300/', 'Стеклянный стакан с настенным держателем', 'Like', '1 690', '990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8034100.jpg', 'https://ampm-store.ru/catalog/derzhatel-dlya-tualetnoy-bumagi-bez-kryshki-like-a8034100/', 'Держатель для туалетной бумаги, без крышки', 'Like', '1 690', '990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8034400.jpg', 'https://ampm-store.ru/catalog/koltso-dlya-polotenets-like-a8034400/', 'Кольцо для полотенец', 'Like', '1 890', '1 090' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A80341500.jpg', 'https://ampm-store.ru/catalog/derzhatel-dlya-tualetnoy-bumagi-s-kryshkoy-like-a80341500/', 'Держатель для туалетной бумаги, с крышкой', 'Like', '1 790', '1 090' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8036900.jpg', 'https://ampm-store.ru/catalog/steklyannyy-dispenser-dlya-zhidkogo-myla-s-nastennym-derzhatelem-like-a8036900/', 'Стеклянный диспенсер для жидкого мыла, с настенным держателем', 'Like', '2 120', '1 290' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A80346400.jpg', 'https://ampm-store.ru/catalog/veshalka-dlya-polotenets-60-sm-like-a80346400/', 'Вешалка для полотенец, 60 см', 'Like', '2 690', '1 590' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8032600.jpg', 'https://ampm-store.ru/catalog/dvoynaya-veshalka-vertushka-dlya-polotenets-40-sm-like-a8032600/', 'Двойная вешалка-вертушка для полотенец, 40 см', 'Like', '3 250', '1 990' )
+            +item-tab('swiper-slide ampm-item--mobile', '-40%', 'A8037700.jpg', 'https://ampm-store.ru/catalog/polka-dlya-polotenets-like-a8037700/', 'Полка для полотенец', 'Like', '7 390', '4 390' )

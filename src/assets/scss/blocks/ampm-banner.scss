@@ -1,0 +1,14 @@
+.ampm-banner {
+  margin-bottom: 35px;
+
+  @media (max-width: $tableWidth) {
+    margin-bottom: 10px;
+  }
+}
+
+.ampm-banner__wrapper {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

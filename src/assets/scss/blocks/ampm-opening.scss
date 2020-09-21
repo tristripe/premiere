@@ -1,0 +1,32 @@
+.ampm-opening {
+  margin-bottom: 10px;
+
+  @media (max-width: $tableWidth) {
+    margin-bottom: 0;
+  }
+}
+
+.ampm-opening__title {
+  font-size: 40px;
+  line-height: 54px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  @media (max-width: $tableWidth) {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+}
+
+.ampm-opening__list {
+
+  @media (max-width: $tableWidth) {
+    li {
+      width: 200px !important;
+    }
+  }
+}

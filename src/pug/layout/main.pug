@@ -1,0 +1,17 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description, content=description")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+  body(class=pageClass id=pageClass)
+    main.ampm-main
+      include ../includes/modules/header
+      .ampm-content-wrapper
+        block content
+      include ../includes/modules/footer
