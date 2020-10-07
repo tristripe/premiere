@@ -3,7 +3,7 @@
 mixin item(className, mark, image, href, name, model, oldPrice, newPrice)
   div(class='ampm-catalog__item ampm-item ' + className)
     span.ampm-item__discount-mark= mark
-    a(href='#').ampm-item__image-wrapper
+    a(href= href).ampm-item__image-wrapper
       img(src="./assets/img/evil-discount/" + image alt='Изображение товара' width='302' height='302')
     .ampm-item__description-wrapper
       a(href= href).ampm-item__name= name

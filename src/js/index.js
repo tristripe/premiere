@@ -43,7 +43,16 @@ if (advantage) {
   let secondButtons = document.querySelectorAll('.ampm-text-slide__button--second');
   let thirdButtons = document.querySelectorAll('.ampm-text-slide__button--three');
 
+  let menu = ['1', '2', '3'];
+
   advantage = new Swiper(advantage, {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (menu[index]) + '</span>';
+      },
+    },
     slidesPerView: 1,
     spaceBetween: 30
   });
@@ -89,7 +98,8 @@ if (tabsContainer) {
 
 if (tabsButtonWrapper) {
   tabsButtonWrapper = new Swiper(tabsButtonWrapper, {
-    slidesPerView: 4
+    slidesPerView: 3,
+    spaceBetween: 5
   })
 }
 
@@ -100,8 +110,8 @@ if (tabsContainersMobile) {
 
     let mobileContainer = tabsContainersMobile[i];
     mobileContainer = new Swiper(mobileContainer, {
-      slidesPerView: 1,
-      spaceBetween: 50,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
     });
 
     buttons[i].addEventListener('click', function (e) {
