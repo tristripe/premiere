@@ -71,8 +71,8 @@ if (tabsButtonWrapper) {
     navigation: {
       nextEl: '.swiper-button-next'
     },
-    slidesPerView: 3,
-    spaceBetween: 5,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
   })
 }
 
@@ -84,8 +84,8 @@ if (tabsContainersMobile) {
     let mobileContainer = tabsContainersMobile[i];
     mobileContainer = new Swiper(mobileContainer, {
       slidesPerView: 1,
-      spaceBetween: 30,
-      width: 200
+      spaceBetween: 15,
+      width: 250
     });
 
     buttons[i].addEventListener('click', function (e) {
