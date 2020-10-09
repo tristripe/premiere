@@ -2,6 +2,8 @@
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
 
 import Swiper from "swiper";
+import SwiperCore, {Navigation, Pagination} from 'swiper';
+SwiperCore.use([Navigation, Pagination]);
 
 let openingList = document.querySelector('.ampm-opening__wrapper');
 let advantage = document.querySelector('.ampm-advantages__inner');
@@ -17,12 +19,12 @@ if (openingList) {
 
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 15
       },
 
       480: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 15
       },
 
@@ -32,7 +34,8 @@ if (openingList) {
       },
 
       1280: {
-        slidesPerView: 4
+        slidesPerView: 4,
+        spaceBetween: 10
       }
     }
   });
@@ -43,33 +46,17 @@ if (advantage) {
   let secondButtons = document.querySelectorAll('.ampm-text-slide__button--second');
   let thirdButtons = document.querySelectorAll('.ampm-text-slide__button--three');
 
-  let menu = ['1', '2', '3'];
+  let menu = ['Скидки', 'Дизайн', 'Инновации'];
 
   advantage = new Swiper(advantage, {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (menu[index]) + '</span>';
-      },
-    },
     slidesPerView: 1,
-    spaceBetween: 30
+    spaceBetween: 30,
   });
-
-  for (let i = 0; i < textSlideButtons.length; i++) {
-    textSlideButtons[i].addEventListener('click', function () {
-      textSlideButtons.forEach(element => element.classList.remove('ampm-text-slide__button--active'));
-    })
-  }
 
   let buttonMoveTo = function (elements, index) {
     elements.forEach(function(element) {
       element.addEventListener('click', function () {
         advantage.slideTo(index);
-        elements.forEach(function(el) {
-          el.classList.add('ampm-text-slide__button--active');
-        })
       })
     });
   }
@@ -78,28 +65,14 @@ if (advantage) {
   buttonMoveTo(secondButtons, 1);
   buttonMoveTo(thirdButtons, 2);
 }
-/*
-if (tabsContainer) {
-  let radioButtons = document.querySelector('.ampm-tabs__wrapper');
-
-  for (let i = 0; i < tabsContainer.length; i++) {
-    let container = tabsContainer[i];
-    container = new Swiper(container, {
-      slidesPerView: 1,
-      spaceBetween: 50,
-    });
-
-    radioButtons.addEventListener('click', function () {
-      container.update();
-    })
-  }
-}
- */
 
 if (tabsButtonWrapper) {
   tabsButtonWrapper = new Swiper(tabsButtonWrapper, {
+    navigation: {
+      nextEl: '.swiper-button-next'
+    },
     slidesPerView: 3,
-    spaceBetween: 5
+    spaceBetween: 5,
   })
 }
 
@@ -110,8 +83,9 @@ if (tabsContainersMobile) {
 
     let mobileContainer = tabsContainersMobile[i];
     mobileContainer = new Swiper(mobileContainer, {
-      slidesPerView: 'auto',
+      slidesPerView: 1,
       spaceBetween: 30,
+      width: 200
     });
 
     buttons[i].addEventListener('click', function (e) {
@@ -119,6 +93,8 @@ if (tabsContainersMobile) {
         let mobileContainer = tabsContainersMobile[i];
         mobileContainer.classList.remove('ampm-tabs__container--active');
       }
+      buttons.forEach(element => element.classList.remove('ampm-tabs__button--active'));
+      buttons[i].classList.add('ampm-tabs__button--active');
       tabsContainersMobile[i].classList.add('ampm-tabs__container--active');
       mobileContainer.update();
     })

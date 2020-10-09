@@ -3,8 +3,8 @@
   margin-bottom: 35px;
 
   &--tab {
-    margin-right: 30px;
-    width: 304px;
+    margin-right: 35px;
+    width: 300px;
   }
 
   @media (max-width: $mdDesktopWidth) {
@@ -19,12 +19,6 @@
     &--tab {
       margin-right: 10px;
       margin-bottom: 35px;
-    }
-  }
-
-  @media (max-width: $tableWidth) {
-    &--mobile {
-      width: 300px !important;
     }
   }
 }

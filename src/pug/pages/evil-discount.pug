@@ -33,8 +33,11 @@ block content
             .ampm-text-slide__text
               p Без паники! С такими скидками ремонт не кусается. Успейте приобрести продукцию коллекционного немецкого бренда с выгодой до 40%!
               p Сантехника и мебель для ванных комнат от АМ.РМ - тот самый преданный друг, который будет служить вам верой и правдой благодаря европейскому качеству и гениальной инженерии.
-              p До 31 ноября по всей территории страны дизайнерские функциональные коллекции Like и X-Joy станут еще доступнее - торопитесь!
-            +buttons-text-slide('Скидки', 'Дизайн', 'Инновации')
+              p До 30 ноября по всей территории страны дизайнерские функциональные коллекции Like и X-Joy станут еще доступнее - торопитесь!
+            .ampm-text-slide__button-wrapper
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--first.ampm-text-slide__button--active Скидки
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--second Дизайн
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--three Инновации
 
         li.ampm-advantages__item.ampm-text-slide.swiper-slide
           .ampm-text-slide__image-wrapper
@@ -44,7 +47,10 @@ block content
               p Что связывает именитые дизайн-бюро GP Designpartners из Австрии и DanelonMeroni из Италии & Великобритании? Совместная с АМ.РМ работа над коллекциями Like и X-Joy!
               p Идеальны от угла наклона аэратора до кончиков ручек тумбы под раковину. Like не оставит равнодушными ценителей природных мотивов в современном дизайне, а X-Joy порадует своей главной фишкой - устремленными ввысь деталями.
               p Не упустите возможность сделать вашу комнату самым трендовым местом в доме со скидками до 40%!
-            +buttons-text-slide('Скидки', 'Дизайн', 'Инновации')
+            .ampm-text-slide__button-wrapper
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--first Скидки
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--second.ampm-text-slide__button--active Дизайн
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--three Инновации
 
         li.ampm-advantages__item.ampm-text-slide.swiper-slide
           .ampm-text-slide__image-wrapper
@@ -56,8 +62,10 @@ block content
               p АМ.РМ первыми начали внедрять высокотехнологичные разработки премиум-класса в продукты доступного ценового сегмента. Доказательство тому - коллекции Like и X-Joy!
               p Картриджи смесителей последнего поколения, функция моментальной очистки душевых форсунок, инновационный способ покрытия мебели полиакриловыми эко-эмалями - это далеко не полный список тех ноу-хау, которыми вы можете овладеть по самой привлекательной цене.
               p Убедитесь в этом сами до конца нашей беспрецедентной акции!
-            +buttons-text-slide('Скидки', 'Дизайн', 'Инновации')
-      .swiper-pagination.ampm-advantages__pagination
+            .ampm-text-slide__button-wrapper
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--first Скидки
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--second Дизайн
+              button(type="button").ampm-text-slide__button.ampm-text-slide__button--three.ampm-text-slide__button--active Инновации
 
   section.ampm-tabs.container.container--expand
     .ampm-tabs__wrapper
@@ -192,14 +200,14 @@ block content
     .ampm-tabs__wrapper.container
       .ampm-tabs__button-wrapper.swiper-container
         .ampm-tabs__controls.swiper-wrapper
-          button(type='button').ampm-tabs__button.swiper-slide Фаянс
+          button(type='button').ampm-tabs__button.ampm-tabs__button--active.swiper-slide Фаянс
           button(type='button').ampm-tabs__button.swiper-slide Мебель для <br> ванной комнаты
           button(type='button').ampm-tabs__button.swiper-slide Смесители
           button(type='button').ampm-tabs__button.swiper-slide Душевое оборудование
           button(type='button').ampm-tabs__button.swiper-slide Ванны
           button(type='button').ampm-tabs__button.swiper-slide Душевые<br> кабины
           button(type='button').ampm-tabs__button.swiper-slide Аксессуары
-
+        .swiper-button-next.ampm-tabs__next
       .ampm-tabs__content-wrapper
 
         <!-- Фаянс -->

@@ -54,6 +54,7 @@ body {
   }
   @media screen and (max-width: $phoneWidth) {
     max-width: $phoneWidth;
+    padding: 0 10px;
   }
 
   &--expand {

@@ -95,4 +95,24 @@
   font-weight: 400;
   background-color: transparent;
   border: none;
+
+  &--active {
+    color: $cardinal;
+  }
+}
+
+
+.swiper-button-next.ampm-tabs__next::after {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.swiper-button-next.ampm-tabs__next::before {
+  content: '';
+  height: 2px;
+  min-width: 30px;
+  background-color: #000000;
+  position: relative;
+  left: 10px;
 }
