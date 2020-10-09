@@ -121,3 +121,7 @@
   position: relative;
   left: 10px;
 }
+
+.swiper-button-next.ampm-tabs__next.swiper-button-disabled {
+  display: none;
+}

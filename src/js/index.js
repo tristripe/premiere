@@ -16,6 +16,7 @@ if (openingList) {
   openingList = new Swiper(openingList, {
     slidesPerView: 4,
     spaceBetween: 30,
+    loop: true,
 
     breakpoints: {
       320: {
@@ -72,7 +73,7 @@ if (tabsButtonWrapper) {
       nextEl: '.swiper-button-next'
     },
     slidesPerView: 'auto',
-    spaceBetween: 30,
+    spaceBetween: 20,
   })
 }
 
@@ -85,7 +86,8 @@ if (tabsContainersMobile) {
     mobileContainer = new Swiper(mobileContainer, {
       slidesPerView: 1,
       spaceBetween: 15,
-      width: 250
+      width: 250,
+      loop: true
     });
 
     buttons[i].addEventListener('click', function (e) {
