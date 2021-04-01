@@ -1,46 +1,20 @@
+mixin slide(imageMobile, imageTablet, image, title, text)
+  .swiper-slide.main-swiper__slide
+    .main-swiper__image-wrapper
+      picture
+        source(media="(max-width:767px)" srcset="./assets/img/slider/" + imageMobile)
+        source(media="(max-width:991px)" srcset="./assets/img/slider/" + imageTablet)
+        img(src="./assets/img/slider/" + image)
+    .main-swiper__content-wrapper
+      .main-swiper__text-wrapper
+        h2.main-swiper__title= title
+        p.main-swiper__text= text
+        button(type="button").btn.main-swiper__btn Посмотреть все
 
-
-mixin item(className, mark, image, href, name, model, oldPrice, newPrice)
-  div(class='ampm-catalog__item ampm-item ' + className)
-    span.ampm-item__discount-mark= mark
-    a(href= href).ampm-item__image-wrapper
-      img(src="./assets/img/evil-discount/" + image alt='Изображение товара' width='302' height='302')
-    .ampm-item__description-wrapper
-      a(href= href).ampm-item__name= name
-      p.ampm-item__model= model
-      .ampm-item__price.ampm-price
-        span.ampm-price__old= oldPrice + ' руб'
-        span.ampm-price__new= newPrice + ' руб'
-    a(href= href).ampm-btn.ampm-item__buy-button
-      span Подробнее
-
-
-mixin item-tab(className, mark, image, href, name, model, oldPrice, newPrice)
-  div(class='ampm-catalog__item ampm-item ampm-item--tab ' + className)
-    span.ampm-item__discount-mark= mark
-    a(href= href).ampm-item__image-wrapper.ampm-item__image-wrapper--tab
-      img(src="./assets/img/evil-discount/" + image alt='Изображение товара' width='302' height='302')
-    .ampm-item__description-wrapper
-      p.ampm-item__model= model
-      a(href= href).ampm-item__name.ampm-item__name--tab= name
-      .ampm-item__price.ampm-price
-        .ampm-price__old= oldPrice + ' руб'
-        .ampm-price__new= newPrice + ' руб'
-    a(href= href).ampm-btn.ampm-item__buy-button
-      span Подробнее
-
-mixin picture(srcMobile, src, alt, width, height)
-  picture
-    source(media='(max-width: 769px)' srcset='./assets/img/evil-discount/' + srcMobile + ' 1x')
-    img(src='./assets/img/evil-discount/' + src  alt= alt width= width height= height)
-
-mixin picture-extended(srcMobile, src, srcX2, alt, width, height)
-  picture
-    source(media='(max-width: 769px)' srcset='./assets/img/evil-discount/' + srcMobile + ' 1x')
-    img(src='./assets/img/evil-discount/' + src srcset='./assets/img/evil-discount/' + srcX2 + ' 2x'  alt= alt width= width height= height)
-
-mixin buttons-text-slide(firstName, secondName, thirdName)
-  .ampm-text-slide__button-wrapper
-    button(type="button").ampm-text-slide__button.ampm-text-slide__button--first.ampm-text-slide__button--active #{firstName}
-    button(type="button").ampm-text-slide__button.ampm-text-slide__button--second #{secondName}
-    button(type="button").ampm-text-slide__button.ampm-text-slide__button--three #{thirdName}
+mixin item(image, title, code)
+  .premiere-collection__item
+    .premiere-collection__image-wrapper
+      img(src="./assets/img/goods/" + image)
+    h3.premiere-collection__item-title= title
+    p.premiere-collection__code= code
+    a(href="#").btn.premiere-collection__btn Подробнее

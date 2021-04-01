@@ -2,18 +2,20 @@
   ========================================================================== */
 
 // Font
-$mainFont                : 'Open Sans', Arial, sans-serif;
-$tondo                   : 'Tondo Corp', Arial, sans-serif;
-$sansation               : 'Sansation', Arial, sans-serif;
+$mainFont                : 'Tondo Corp', Verdana, sans-serif;
+$openSans                   : 'Open Sans', Verdana, sans-serif;
+$sansation               : 'Sansation', Verdana, sans-serif;
+$sfpro                   : 'Sf Pro Display', Verdana, sans-serif;
+$nova                    : 'Novito Nova', Verdana, sans-serif;
 
 // Size
-$mainFontColor           : #101010;
-$mainFontSize            : 16px;
+$mainFontColor           : #ffffff;
+$mainFontSize            : 14px;
 $mainFontWeight          : 400;
-$mainLineHeight          : 1.4;
+$mainLineHeight          : 1.3;
 
-$desktopWidth            : 1380px;
-$mdDesktopWidth          : 1280px;
+$desktopWidth            : 1200px;
+$mdDesktopWidth          : 1120px;
 $minDesktopWidth         : 1080px;
 $smDesktopWidth          : 1024px;
 $tableWidth              : 768px;
@@ -23,13 +25,14 @@ $smPhoneWidth            : 320px;
 
 // Colors
 
-$black: #000000;
-$default-black: #1c2e36;
-$white: #ffffff;
-$gray: #8d969a;
-$cardinal: #e52443;
-$border-gray: #e9ebeb;
-$blue: #40b0e3;
+$default-black           : #000000;
+$default-white           : #ffffff;
+$light-black             : #151516;
+$default-dark            : #212123;
+$light-dark              : #b8bcda;
+$default-gray            : #d9d8d9;
+$white-15                : rgba(255, 255, 255, 0.15);
+$white-70                : rgba(255, 255, 255, 0.70);
 
 // Transition
 

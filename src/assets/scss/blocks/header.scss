@@ -1,0 +1,84 @@
+.header {
+  padding-top: 16px;
+}
+
+.header__main {
+  border-bottom: 1px solid $white-15;
+  padding-bottom: 10px;
+}
+
+.header__main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 15px auto 0;
+
+  @media (max-width: 1199px) {
+    width: auto;
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    z-index: 2;
+    background-color: $default-black;
+  }
+}
+
+.header__main-link {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  letter-spacing: 0.0135em;
+  text-decoration: none;
+  color: $default-white;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.header__sub-link {
+  font-size: 11px;
+  line-height: 11px;
+  color: $white-70;
+
+  &--bag {
+    background-image: url("~../img/bag-in-circle.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: center right;
+    padding: 16px 48px 16px 0;
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.header__nav-Link {
+  text-decoration: none;
+  color: $default-white;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (max-width: 991px) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 44px;
+
+    &:first-child {
+      margin-top: 240px;
+    }
+  }
+}

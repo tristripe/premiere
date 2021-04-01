@@ -144,7 +144,7 @@ module.exports = {
     // Vue loader
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `assets/css/[name].[contenthash].css`
+      filename: `assets/css/app.6c2bf4c214272c252122.css`
     }),
     new CopyWebpackPlugin({
       patterns: [

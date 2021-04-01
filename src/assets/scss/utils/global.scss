@@ -3,9 +3,6 @@ html {
   font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
 }
 
 body {
@@ -16,6 +13,7 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $default-black;
 }
 
 *,
@@ -44,20 +42,54 @@ body {
   position: relative;
   margin: 0 auto;
   padding: 0 30px;
-  max-width: $desktopWidth;
+  max-width: 1260px;
+
+  &--narrow {
+    max-width: 1200px;
+  }
+
   @media screen and (max-width: $smDesktopWidth) {
     max-width: $smDesktopWidth;
   }
   @media screen and (max-width: $tableWidth) {
     max-width: $tableWidth;
     padding: 0 20px;
+
+    &--no-padding {
+      padding: 0;
+    }
   }
+
   @media screen and (max-width: $phoneWidth) {
     max-width: $phoneWidth;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
   &--expand {
     max-width: $desktopWidth + 35px;
   }
+}
+
+
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(0 0 0 0);
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+}
+
+.block-wrapper {
+  width: 1168px;
+  margin: 0 auto;
+}
+
+.link-icon {
+  text-decoration: none;
+  color: $default-white;
+}
+
+.main-slider {
+  z-index: 0;
 }

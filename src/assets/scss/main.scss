@@ -9,17 +9,15 @@
 
 @import "vendor/swiper.min";
 
-// Blocks
+// blocks
 
-@import "blocks/ampm-catalog";
-@import "blocks/ampm-item";
-@import "blocks/ampm-price";
-@import "blocks/ampm-banner";
-@import "blocks/ampm-opening";
-@import "blocks/ampm-advantages";
-@import "blocks/ampm-text-slide";
-@import "blocks/ampm-product-tab";
-@import "blocks/ampm-tabs";
-
-// Modules:
-// example: @import "modules/my-module.scss";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/main-swiper";
+@import "blocks/btn";
+@import "blocks/preview";
+@import "blocks/text-block";
+@import "blocks/sub-slider";
+@import "blocks/intro";
+@import "blocks/premiere-collection";
+@import "blocks/ham-menu";

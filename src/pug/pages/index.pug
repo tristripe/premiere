@@ -6,7 +6,89 @@ block variables
   - var pageClass = 'index-main'
 
 block content
-  h1 Список страниц
-  ul
-    li
-      a(href="evil-discount.html") Очень злые скидки
+  section.main-slider
+    .main-slider__wrapper
+      .swiper-container.main-swiper
+        .swiper-wrapper
+          +slide('x-joy--mobile.jpg', 'x-joy--tablet.jpg', 'x-joy.jpg', 'Коллекция X-joy', 'Стильные, функциональные, превосходящие самые строгие европейские стандарты качества. Выберите, какой из продуктов подходит именно вам. Узнайте больше о том, насколько широкий спектр возможностей предлагает сантехника АМ.РМ')
+          +slide('x-joy--mobile.jpg', 'x-joy--tablet.jpg', 'x-joy.jpg', 'Коллекция X-joy', 'Стильные, функциональные, превосходящие самые строгие европейские стандарты качества. Выберите, какой из продуктов подходит именно вам. Узнайте больше о том, насколько широкий спектр возможностей предлагает сантехника АМ.РМ')
+          +slide('x-joy--mobile.jpg', 'x-joy--tablet.jpg', 'x-joy.jpg', 'Коллекция X-joy', 'Стильные, функциональные, превосходящие самые строгие европейские стандарты качества. Выберите, какой из продуктов подходит именно вам. Узнайте больше о том, насколько широкий спектр возможностей предлагает сантехника АМ.РМ')
+          +slide('x-joy--mobile.jpg', 'x-joy--tablet.jpg', 'x-joy.jpg', 'Коллекция X-joy', 'Стильные, функциональные, превосходящие самые строгие европейские стандарты качества. Выберите, какой из продуктов подходит именно вам. Узнайте больше о том, насколько широкий спектр возможностей предлагает сантехника АМ.РМ')
+          +slide('x-joy--mobile.jpg', 'x-joy--tablet.jpg', 'x-joy.jpg', 'Коллекция X-joy', 'Стильные, функциональные, превосходящие самые строгие европейские стандарты качества. Выберите, какой из продуктов подходит именно вам. Узнайте больше о том, насколько широкий спектр возможностей предлагает сантехника АМ.РМ')
+          +slide('x-joy--mobile.jpg', 'x-joy--tablet.jpg', 'x-joy.jpg', 'Коллекция X-joy', 'Стильные, функциональные, превосходящие самые строгие европейские стандарты качества. Выберите, какой из продуктов подходит именно вам. Узнайте больше о том, насколько широкий спектр возможностей предлагает сантехника АМ.РМ')
+  section.preview
+    .preview__wrapper.container
+      .preview__column
+        .preview__block
+          .preview__image-wrapper
+            img(src="./assets/img/items/little-1.jpg")
+          .preview__content-wrapper.text-block
+            p.preview__upper-text.text-block__upper-text Премьера коллекции
+            h3.preview__title.text-block__title X-Joy
+              span  extraordinary everyday joy
+            button(type="button").btn.preview__btn Посмотреть все
+        .preview__block
+          .preview__image-wrapper
+            img(src="./assets/img/items/little-2.jpg")
+          .preview__content-wrapper
+            h3.preview__title.text-block__title Смесители
+            button(type="button").btn.preview__btn Посмотреть все
+      .preview__column
+        .preview__block
+          .preview__image-wrapper
+            img(src="./assets/img/items/big-1.jpg")
+          .preview__content-wrapper
+            h3.preview__title.text-block__title Wellness
+            button(type="button").btn.preview__btn Посмотреть все
+
+  section.sub-slider
+    .sub-slider__wrapper.container
+      .sub-slider__block.sub-slider__block--bg
+        .sub-slider__text-content.text-block.text-block--slider
+          p.text-block__upper-text Самое ожидаемое обновление
+          h3.text-block__title.sub-slider__title Смесители для кухни
+          p.text-block__text AM.PM становится экспертом в кухонных смесителях. Знакомьтесь с первой волной обновлений и расширенной линейкой.
+          button(type="button").btn.sub-slider__btn Посмотреть все
+      .sub-slider__block
+        .sub-slider__slider.swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-1.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-2.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-3.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-4.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-5.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-6.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-7.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-8.jpg')
+            .swiper-slide
+              img(src='./assets/img/items/kitchen-9.jpg')
+  section.preview
+    .preview__wrapper.container
+      .preview__column
+        .preview__block
+          .preview__image-wrapper
+            img(src="./assets/img/items/little-3.jpg")
+          .preview__content-wrapper.text-block
+            h3.preview__title.text-block__title.text-block__title--black Фаянс
+            button(type="button").btn.btn--gray.preview__btn Посмотреть все
+        .preview__block
+          .preview__image-wrapper
+            img(src="./assets/img/items/little-4.jpg")
+          .preview__content-wrapper.text-block
+            h3.preview__title.text-block__title.text-block__title--black Аксессуары
+            button(type="button").btn.btn--gray.preview__btn Посмотреть все
+      .preview__column
+        .preview__block
+          .preview__image-wrapper
+            img(src="./assets/img/items/big-2.jpg")
+          .preview__content-wrapper.text-block
+            h3.preview__title.text-block__title Душевое оборудование
+            button(type="button").btn.preview__btn Посмотреть все

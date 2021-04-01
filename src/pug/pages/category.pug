@@ -1,0 +1,58 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Главный шаблон'
+  - var description = 'Описание страницы'
+  - var pageClass = 'index-main'
+
+block content
+  section.intro
+    .intro__wrapper.container
+      .intro__image-wrapper
+        img(src="./assets/img/bg.png")
+      .intro__inner-wrapper
+        .intro__content
+          a(href="#").intro__back Назад
+          .intro__text
+            h1.intro__title Смесители для кухни
+            p.intro__lead-text AM.PM становится экспертом в кухонных смесителях! Знакомьтесь с абсолютной новинкой 2021 года!
+  section.premiere-collection
+    .premiere-collection__wrapper.container
+      h2.premiere-collection__title Коллекция Like
+      .premiere-collection__content
+        .premiere-collection__preview
+          p.premiere-collection__text Большой выбор самых постребованных архитектур и цветов:
+          ul.premiere-collection__list
+            li
+              .premiere-collection__icon-wrapper
+                img(src="./assets/img/texture/chrome.png")
+              span Хром
+            li
+              .premiere-collection__icon-wrapper
+                img(src="./assets/img/texture/satin.png")
+              span Сатин
+            li
+              .premiere-collection__icon-wrapper
+                img(src="./assets/img/texture/black.png")
+              span Черный
+            li
+              .premiere-collection__icon-wrapper
+                img(src="./assets/img/texture/white.png")
+              span Белый
+        .premiere-collection__goods
+          +item('item-1.jpg', 'Смеситель для кухни хром', 'F8007100')
+          +item('item-1.jpg', 'Смеситель для кухни хром', 'F8007100')
+          +item('item-1.jpg', 'Смеситель для кухни хром', 'F8007100')
+  section.premiere-collection
+    .premiere-collection__wrapper.container
+      .premiere-collection__content
+        .premiere-collection__preview
+          p.premiere-collection__text Только самые важные и полезные функции:
+          .premiere-collection__image-feature
+            img(src="./assets/img/texture/mixer.png")
+        .premiere-collection__goods
+          +item('item-1.jpg', 'Смеситель для кухни хром', 'F8007100')
+          +item('item-1.jpg', 'Смеситель для кухни хром', 'F8007100')
+          +item('item-1.jpg', 'Смеситель для кухни хром', 'F8007100')
+
+
